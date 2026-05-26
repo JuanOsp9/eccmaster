@@ -93,9 +93,9 @@ set_mode mv
 
 # 2. Cut the signal sram_din
 # This prevents the RTL encoder from driving this net
-#set_cut_signals {memory_wrapper.u_sram.din0 memory_wrapper.ecc_enc.data}
+set_cut_signals {memory_wrapper.u_sram.din0 memory_wrapper.ecc_enc.data}
 
-#cut_signals {memory_wrapper.u_sram.din0 memory_wrapper.ecc_enc.data}
+cut_signals {memory_wrapper.u_sram.din0 memory_wrapper.ecc_enc.data}
 
 # Save Setup Database
 if {$use_setup_database} {
@@ -105,7 +105,7 @@ if {$use_setup_database} {
 }
 
 read_sva -version sv2012 [subst {
-    $property_path/fv_memory_wrapper_pack.sv
+    $property_path/fv_memory_wrapper_pack_cut.sv
 }]
 
 
