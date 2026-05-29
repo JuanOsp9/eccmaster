@@ -18,7 +18,7 @@ module tb_memory_wrapper;
   logic [ADDR_WIDTH-1:0]  addr;
   logic [DATA_WIDTH-1:0]  d;
   logic [DATA_WIDTH-1:0]  q;
-  logic                   error_corrected;
+  logic                   single_bit_corrected;
   logic                   double_bit_error;
 
   // -------------------------------------------------
@@ -34,7 +34,8 @@ module tb_memory_wrapper;
     .addr               (addr),
     .d                  (d),
     .q                  (q),
-    .error_corrected(error_corrected)
+    .single_bit_corrected(single_bit_corrected),
+    .double_bit_error   (double_bit_error)
   );
 
   // -------------------------------------------------
