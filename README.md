@@ -30,4 +30,3 @@ The work explores multiple Error Correction Code (ECC) schemes and introduces a 
 
 ---
 
-## 📂 Repository Structure
